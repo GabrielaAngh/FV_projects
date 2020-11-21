@@ -1,0 +1,9 @@
+dvt_build.log
+.dvt/default.build.help
+.dvt/default.build.auto.1
+**/cov_work
+**/INCA_libs
+**/irun.history
+**/irun.key
+**/.simvision
+**/*log

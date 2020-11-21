@@ -1,0 +1,40 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INPUT
+"@source /opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl"
++incdir+/home/gabriela.anghel6/labs/p2s_uvm
++incdir+/home/gabriela.anghel6/labs/p2s_uvm/rtl
++incdir+/home/gabriela.anghel6/labs/p2s_uvm/tb
++incdir+/home/gabriela.anghel6/labs/p2s_uvm/tb/in
++incdir+/home/gabriela.anghel6/labs/p2s_uvm/tb/out
++incdir+/home/gabriela.anghel6/labs/p2s_uvm/tb/tests
+-uvmhome
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
++UVM_TESTNAME=ex_test
+-SVSEED
+-gui
+-gui
+-COVOVERWRITE
+-MESSAGES
+-SV_LIB
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so
++EMGRLOG
+irun.log
+-XLSTIME
+1577525201
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.14.10.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.14.10.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.14.10.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun(64)	14.10-p001"

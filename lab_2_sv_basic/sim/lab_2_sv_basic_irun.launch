@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="ro.amiq.dvt.launch.DVTGenericLaunchConfigurationType">
+<stringAttribute key="bad_container_name" value="/DVT-Settings"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="lab_2_sv_basic"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="ro.amiq.dvt.launch.DVTProcessFactory"/>
+<stringAttribute key="ro.amiq.dvt.launch.CONSOLE_TITLE_PATTERN" value=""/>
+<booleanAttribute key="ro.amiq.dvt.launch.CREATE_ACCELERATOR" value="false"/>
+<booleanAttribute key="ro.amiq.dvt.launch.CREATE_SHORTCUT" value="false"/>
+<stringAttribute key="ro.amiq.dvt.launch.FILTERS_KIND" value="IUS,UVM,"/>
+<stringAttribute key="ro.amiq.dvt.launch.GENERIC_COMMAND_ATTR" value="./ncsim_run.sh 3244533"/>
+<stringAttribute key="ro.amiq.dvt.launch.LAUNCH_MODE" value="RUN"/>
+<stringAttribute key="ro.amiq.dvt.launch.LAUNCH_PATTERNS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;patterns/&gt;"/>
+<stringAttribute key="ro.amiq.dvt.launch.LAUNCH_SESSION" value="new"/>
+<stringAttribute key="ro.amiq.dvt.launch.PROJECT_ATTR" value="lab_2_sv_basic"/>
+<stringAttribute key="ro.amiq.dvt.launch.RUN_AS" value="command"/>
+<booleanAttribute key="ro.amiq.dvt.launch.SESSION_TERMINATE_ON_EXIT" value="true"/>
+<stringAttribute key="ro.amiq.dvt.launch.SHORTCUT_BINDING" value=""/>
+<stringAttribute key="ro.amiq.dvt.launch.SHORTCUT_ICON_BGCOLOR" value="00355f"/>
+<stringAttribute key="ro.amiq.dvt.launch.SHORTCUT_ICON_LETTER" value="R"/>
+<stringAttribute key="ro.amiq.dvt.launch.SHORTCUT_ICON_PATH" value=""/>
+<stringAttribute key="ro.amiq.dvt.launch.SHORTCUT_TOOLBAR_ORDER" value="0"/>
+<stringAttribute key="ro.amiq.dvt.launch.WORKING_DIRECTORY" value="${workspace_loc:/lab_2_sv_basic/sim}"/>
+<booleanAttribute key="ro.amiq.dvt.launch.WORKING_SET_LINK_FILTER" value="true"/>
+<booleanAttribute key="ro.amiq.dvt.launch.XTERM_HOLD" value="false"/>
+<booleanAttribute key="ro.amiq.dvt.launch.XTERM_REDIRECT" value="false"/>
+</launchConfiguration>

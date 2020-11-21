@@ -1,0 +1,24 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-uvmhome
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
++UVM_TESTNAME=ex_test
+-SVSEED
+1
+-gui
+-64bit
+-gui
+-COVERAGE
+all
+-COVERAGE
+functional
+-COVOVERWRITE
++TOP_INTERNAL+ex_top
+-TCL
+-MESSAGES
+-SV_LIB
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so

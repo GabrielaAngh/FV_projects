@@ -1,0 +1,37 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-RUNMODE
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm/rtl
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm/tb
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm/tb/in
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm/tb/out
+-INCDIR
+/home/gabriela.anghel6/labs/p2s_uvm/tb/tests
+-sv
+-LINEDEBUG
+-INCDIR
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-INCDIR
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/additions/sv
+-UPDATE
+-CDSLIB
+./INCA_libs/irun.lnx8664.14.10.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.14.10.nc/hdlrun.var
+-work
+worklib
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv
+/opt/cadence/incisiv/tools/methodology/UVM/CDNS-1.1d/additions/sv/cdns_uvm_pkg.sv

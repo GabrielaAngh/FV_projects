@@ -1,0 +1,24 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm/rtl
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/in
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/out
+-INCDIR
+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/tests
+-sv
+-LINEDEBUG
+-I_INCDIR
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv
