@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++UVM_TESTNAME=ex_test
+-svseed
+1
+-gui
+-f
+/home/aces_gabriela.anghel6/labs/p2s_uvm/sim/run.options
+-s

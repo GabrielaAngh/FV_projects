@@ -1,0 +1,118 @@
+#!/bin/bash
+
+# Agenda telefonica in bash
+
+BOOK="new-phone.txt"
+
+Adauga(){
+    echo "Aceasta este Agenda Telefonica"
+    echo -n "Introduceti numele persoanei: "
+    read nume
+
+    echo -n "Intoduceti numarul de telefon: "
+    read numar_telefon
+
+    echo "Doriti salvarea datelor introduse: "
+    echo -e "$nume ; $numar_telefon \n"
+    echo -n "y/n: "
+    read raspuns
+
+    if [ "$raspuns" == "y" ]
+    then 
+        #Scrie valorile in fila
+        echo "$nume ; $numar_telefon" >> $BOOK
+    else
+        #Mesajul afisat utilizatorului
+        echo "$nume ; $phone Nu a fost scris in $BOOK"
+    fi
+}
+
+Programare(){
+    echo "Cu ce persoana doriti sa programati o intalnire?: "
+    read persoana
+    echo "Pe ce data?: "
+    read data
+    echo "La ce ora?: "
+    read ora
+
+    mv $BOOK book.txt
+    #Recupereaza datele din agenda, mai putin linia care se doreste editata
+    grep -v $persoana book.txt > $BOOK
+    progr = $(grep -i $persoana book.txt)
+    echo -n $progr >> $BOOK
+    echo " ; $data ; $ora" >> $BOOK    
+}
+
+Afiseaza(){
+    echo "Numarul liniei: Nume ; Numar de telefon ; Data programare ; Ora programare"
+    #Afiseaza numele si nr tel cu numar de linie
+    nl --number-separator=":     " $BOOK | less
+}
+
+Sterge(){
+    echo "Ce persoana din agenda doriti sa stergeti?: "
+    read persoana
+    #Redenumiti fila inainte de stergere"
+    mv $BOOK book.txt
+    #Recupereaza datele din agenda, mai putin linia care se doreste stearsa
+    grep -v $persoana book.txt | tee $BOOK   
+}
+
+Gaseste(){
+    echo -n "Ce persoana sau numar de telefon cautati?: "
+    read find_persORnr
+
+    echo "Nume ; Numar de telefon"
+    if grep -i $find_persORnr $BOOK
+    then
+	echo "Cautarea s-a finalizat cu succes!"
+    else
+	echo "Persoana sau numarul de telefon nu exista in agenda!"
+    fi
+}
+
+Trimite(){
+    echo "Intrduceti email-ul catre care doriti sa trimiteti agenda:"
+    read email
+    set record=Sent
+    mailx -s "Sending email by using mailx " < $BOOK $email
+}
+
+Agenda(){
+    exit=0
+    while [ $exit -ne 1 ]
+    do
+        echo "Ce operatie doriti sa executati?"
+        echo -e "adauga, afiseaza, gaseste, sterge, trimite, programare, exit: "
+        read raspuns
+
+        if [ "$raspuns" = "adauga" ]
+        then
+            Adauga
+        elif [ "$raspuns" = "afiseaza" ]
+        then
+            Afiseaza
+        elif [ "$raspuns" = "sterge" ]
+        then 
+            Sterge
+        elif [ "$raspuns" = "gaseste" ]
+        then
+            Gaseste
+        elif [ "$raspuns" = "trimite" ]
+        then
+            Trimite
+	elif [ "$raspuns" = "programare" ]
+        then
+            Programare
+        elif [ "$raspuns" = "exit" ]
+        then 
+            exit=1
+        else
+            echo "Comanda dvs nu este in lista!"
+        fi
+
+    done
+}
+
+#De aici incepe executia scriptului
+Agenda

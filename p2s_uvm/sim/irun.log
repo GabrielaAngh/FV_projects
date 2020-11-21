@@ -1,0 +1,165 @@
+irun(64): 15.20-s053: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s053: Started on Jan 15, 2020 at 20:25:10 EET
+irun
+	+UVM_TESTNAME=ex_test
+	-svseed 1
+	-gui
+	-f /home/aces_gabriela.anghel6/labs/p2s_uvm/sim/run.options
+		-64bit
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm/rtl
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/in
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/out
+		+incdir+/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/tests
+		-sv
+		-gui
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/rtl/ex_clk_rst_gen.v
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/rtl/ex_p2s.v
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/in/ex_in_pkg.sv
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/out/ex_out_pkg.sv
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_pkg.sv
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/tests/ex_test_pkg.sv
+		/home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_top.sv
+		-access rwc
+		-linedebug
+		-coverage all
+		-coverage functional
+		-covoverwrite
+		-timescale 1ns/1ps
+		-top ex_top
+	-s
+irun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+SVSEED set from command line: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> 
+ncsim> source /opt/cadence/installs/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> 
+-------------------------------------
+Relinquished control to SimVision...
+# Restoring simulation environment...
+ncsim> input -quiet .reinvoke.sim
+ncsim> file delete .reinvoke.sim
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s053)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test ex_test...
+UVM_INFO /home/aces_gabriela.anghel6/labs/p2s_uvm/tb/tests/ex_test.svh(39) @ 0: uvm_test_top [ex_test] Printing the test topology :
+-----------------------------------------------------------------
+Name             Type                                 Size  Value
+-----------------------------------------------------------------
+uvm_test_top     ex_test                              -     @2690
+  env            ex_env                               -     @2755
+    in_agent     ex_in_agent                          -     @2792
+      driver     ex_in_driver                         -     @3082
+      monitor    ex_in_monitor                        -     @2988
+      sequencer  ex_in_sequencer                      -     @3161
+    out_agent    ex_out_agent                         -     @2822
+      monitor    ex_out_monitor                       -     @3877
+    scoreboard   ex_scoreboard                        -     @2852
+      in_port    uvm_analysis_imp_collected_item_in   -     @2903
+      out_port   uvm_analysis_imp_collected_item_out  -     @2954
+-----------------------------------------------------------------
+
+UVM_INFO /home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_scoreboard.svh(59) @ 150000: uvm_test_top.env.scoreboard [scoreboard in write_collected_item_in] 
+--------------------------------------
+Name         Type       Size  Value   
+--------------------------------------
+my_item      ex_in_cmd  -     @3070   
+  idle_time  integral   32    'h0     
+  address    integral   8     'h45    
+  data       integral   8     'hbc    
+  rnw        ex_rnw_t   32    EX_WRITE
+--------------------------------------
+
+UVM_INFO /home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_scoreboard.svh(59) @ 170000: uvm_test_top.env.scoreboard [scoreboard in write_collected_item_in] 
+-------------------------------------
+Name         Type       Size  Value  
+-------------------------------------
+my_item      ex_in_cmd  -     @3070  
+  idle_time  integral   32    'h0    
+  address    integral   8     'h98   
+  data       integral   8     'he6   
+  rnw        ex_rnw_t   32    EX_READ
+-------------------------------------
+
+UVM_INFO /home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_scoreboard.svh(67) @ 670000: uvm_test_top.env.scoreboard [scoreboard in write_collected_item_OUTTTTTT] 
+-------------------------------------------------
+Name             Type               Size  Value  
+-------------------------------------------------
+my_item          ex_out_serial_obj  -     @3959  
+  idle_time      integral           32    'h0    
+  address        integral           8     'h98   
+  data           integral           8     'h5a   
+  rnw            ex_rnw_t           32    EX_READ
+  start_pattern  integral           4     'ha    
+  crc            integral           4     'h0    
+-------------------------------------------------
+
+UVM_FATAL /home/aces_gabriela.anghel6/labs/p2s_uvm/tb/ex_scoreboard.svh(81) @ 670000: uvm_test_top.env.scoreboard [ex_scoreboard] [SCOREBOARD] FIFOS not equal
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    5
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[RNTST]     1
+[ex_scoreboard]     1
+[ex_test]     1
+[scoreboard in write_collected_item_OUTTTTTT]     1
+[scoreboard in write_collected_item_in]     2
+Simulation complete via $finish(1) at time 670 NS + 1
+/opt/cadence/installs/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_report_object.svh:292     $finish;
+ncsim> scope -set ex_pkg::
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "item_cg" will not be dumped to database as per_instance option value is set to 0:../tb/in/ex_in_monitor.svh, 28.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "item_cg" will not be dumped to database as per_instance option value is set to 0:../tb/out/ex_out_monitor.svh, 29.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "item_cg" will not be dumped to database as per_instance option value is set to 0:../tb/in/ex_in_monitor.svh, 28.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "item_cg" will not be dumped to database as per_instance option value is set to 0:../tb/out/ex_out_monitor.svh, 29.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  ex_top(ex_top)
+  scope    :  scope
+  testname :  test_sv1
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_6982ed1a_28bc4c4b.ucm (reused)
+  data               :  ./cov_work/scope/test_sv1/icc_6982ed1a_28bc4c4b.ucd
+TOOL:	irun(64)	15.20-s053: Exiting on Jan 15, 2020 at 20:32:46 EET  (total: 00:07:36)
